@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Robotics on timpieces</title><link>https://timpieces.me/tags/robotics/</link><description>Recent content in Robotics on timpieces</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 15 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://timpieces.me/tags/robotics/index.xml" rel="self" type="application/rss+xml"/><item><title>robot arm</title><link>https://timpieces.me/endeavours/robot-arm/</link><pubDate>Wed, 15 Oct 2025 00:00:00 +0000</pubDate><guid>https://timpieces.me/endeavours/robot-arm/</guid><description>&lt;p&gt;&lt;img src="./robot_arm.jpg" alt="robot arm"&gt;&lt;/p&gt;
+&lt;p&gt;I attended a conference in October 2025 where I played chess against a robot. It was a fun distraction, but overall I was a little unimpressed because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the robot arm was slow&lt;/li&gt;
+&lt;li&gt;it kept saying my moves were invalid (they weren&amp;rsquo;t)&lt;/li&gt;
+&lt;li&gt;it was relatively expensive (1000$)&lt;/li&gt;
+&lt;li&gt;it required playing on a special board&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I wanted to try my hand at building a simple chess robot. In principle it didn&amp;rsquo;t seem too hard, although I&amp;rsquo;m aware that these things always take longer than we would like.
+In any case, I&amp;rsquo;d been wanting to do an electronics and robotics project for some time, so why not give it a shot?&lt;/p&gt;</description></item></channel></rss>
