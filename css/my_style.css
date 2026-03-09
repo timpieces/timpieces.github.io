@@ -1,0 +1,362 @@
+.stream-item.is-hidden {
+  display: none;
+}
+
+.main-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+}
+
+.about__portrait {
+  float: right;
+  width: 220px;
+  max-width: 35%;
+  margin: 0.2rem 0 1rem 1.25rem;
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .about__portrait {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+.footer-link {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--blue);
+}
+
+.footer-sep {
+  color: var(--grey);
+  margin: 0 0.35rem;
+}
+
+.site-kicker {
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  font-size: 1.05rem;
+  color: var(--grey);
+}
+
+.featured-card img.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.stream-item .card-body {
+  padding-top: 0.75rem;
+}
+
+.stream-tab {
+  text-transform: lowercase;
+}
+
+.tag-badge {
+  text-transform: lowercase;
+}
+
+.stream-badge {
+  font-weight: 400;
+}
+
+.tag-pill {
+  color: var(--grey);
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  text-transform: lowercase;
+  padding: 0.1rem 0.35rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-blurb {
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+.stream-tabs {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 0.35rem 0.45rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.stream-tabs .button {
+  margin-bottom: 0;
+}
+
+.quality-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.6rem;
+}
+
+.quality-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.2rem;
+  height: 1.1rem;
+}
+
+.quality-bar {
+  width: 0.22rem;
+  background: #94a3b8;
+  border-radius: 3px;
+  opacity: 0.35;
+}
+
+.quality-bar:nth-child(1) {
+  height: 0.4rem;
+}
+
+.quality-bar:nth-child(2) {
+  height: 0.7rem;
+}
+
+.quality-bar:nth-child(3) {
+  height: 1rem;
+}
+
+#quality-toggle[data-quality="low"] .quality-bar:nth-child(1),
+#quality-toggle[data-quality="medium"] .quality-bar:nth-child(1),
+#quality-toggle[data-quality="high"] .quality-bar:nth-child(1),
+#quality-toggle[data-quality="medium"] .quality-bar:nth-child(2),
+#quality-toggle[data-quality="high"] .quality-bar:nth-child(2),
+#quality-toggle[data-quality="high"] .quality-bar:nth-child(3) {
+  background: #64748b;
+  opacity: 1;
+}
+
+.featured-card {
+  border-radius: 16px;
+}
+
+.featured-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: #6b7280;
+  margin-bottom: 0.6rem;
+}
+
+.custom-filters {
+  margin-bottom: 1.5rem;
+}
+
+.custom-filters__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.custom-filters__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 160px;
+}
+
+.custom-filters__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: #1f2937;
+  opacity: 1;
+}
+
+.custom-filters__field input,
+.custom-filters__field select {
+  border: 1px solid #94a3b8;
+  border-radius: 12px;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.95rem;
+  color: #1f2937;
+  background: #cbd5e1;
+}
+
+.custom-filters__row .button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.85);
+  align-self: center;
+  height: 2.35rem;
+  line-height: 1;
+  margin-top: 1.1rem;
+}
+
+.custom-filters__row .button:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.chip-picker {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+  min-height: 2.35rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid #94a3b8;
+  border-radius: 12px;
+  background: #cbd5e1;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.chip {
+  border: none;
+  padding: 0.15rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+}
+
+.chip-add {
+  border: 1px solid rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.7);
+  color: #f8fafc;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 8px;
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.chip.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+}
+
+.chip.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.chip-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 10;
+  display: grid;
+  gap: 0.35rem;
+  min-width: 180px;
+  padding: 0.6rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.chip-option {
+  border: 1px solid rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.7);
+  color: #f8fafc;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.chip-option:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Minimal article readability + code presentation overrides. */
+.main-content {
+  font-size: 1.1rem;
+  line-height: 1.72;
+  color: #1f2937;
+}
+
+.main-content p,
+.main-content ul,
+.main-content ol,
+.main-content pre,
+.main-content blockquote {
+  margin-bottom: 1.1rem;
+}
+
+.main-content li + li {
+  margin-top: 0.3rem;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: #0f172a;
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  font-family: var(--headings);
+}
+
+.main-content :not(pre) > code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  color: #0f172a;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.08rem 0.35rem;
+}
+
+.main-content .highlight {
+  border: 0;
+  padding-left: 0;
+}
+
+.main-content pre,
+.main-content .highlight pre {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 0.9rem 1rem !important;
+  line-height: 1.5;
+  font-size: 0.92rem;
+  overflow-x: auto;
+}
+
+.main-content pre code,
+.main-content .highlight pre code {
+  color: inherit;
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    font-size: 1.03rem;
+    line-height: 1.68;
+  }
+}

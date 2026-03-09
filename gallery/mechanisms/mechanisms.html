@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{{ TITLE }}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Inter", "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: transparent;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        accent-color: #f97316;
+      }
+
+      .mechanisms-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: rgba(15, 23, 42, 0.9);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        overflow: hidden;
+      }
+
+      canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(2, 6, 23, 0.9);
+      }
+
+      .mechanisms-loading {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(226, 232, 240, 0.8);
+        background: rgba(2, 6, 23, 0.76);
+        backdrop-filter: blur(6px);
+        transition: opacity 220ms ease;
+      }
+
+      .mechanisms-loading[data-hidden="true"] {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mechanisms-wrapper">
+      <canvas id="canvas" tabindex="0" oncontextmenu="event.preventDefault()"></canvas>
+      <div class="mechanisms-loading" id="mechanisms-loading">Loading mechanisms…</div>
+    </div>
+    <script type="text/javascript">
+      var Module = Module || {};
+      (function initModule() {
+        var loading = document.getElementById('mechanisms-loading');
+        function hideLoading() {
+          if (loading) {
+            loading.setAttribute('data-hidden', 'true');
+          }
+        }
+
+        var canvas = document.getElementById('canvas');
+        Module.print = Module.print || function (text) {
+          console.log(text);
+        };
+        Module.printErr = Module.printErr || function (text) {
+          console.error(text);
+        };
+        Module.canvas = canvas;
+
+        function resizeCanvas() {
+          if (!Module.canvas) return;
+          var ratio = window.devicePixelRatio || 1;
+          var width = Module.canvas.clientWidth * ratio;
+          var height = Module.canvas.clientHeight * ratio;
+          if (Module.setCanvasSize) {
+            Module.setCanvasSize(width, height);
+          } else {
+            Module.canvas.width = width;
+            Module.canvas.height = height;
+          }
+        }
+
+        Module.onRuntimeInitialized = function () {
+          hideLoading();
+          resizeCanvas();
+        };
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+      })();
+    </script>
+    <script async type="text/javascript" src="mechanisms.js"></script>
+  </body>
+</html>
